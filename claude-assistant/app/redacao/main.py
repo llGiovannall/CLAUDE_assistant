@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Request
 from pydantic import BaseModel
-from redacao.aiprovider import corrigir_redacao
+from aiprovider import corrigir_redacao
 
 app = FastAPI()
 
