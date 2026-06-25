@@ -39,3 +39,6 @@ def teste_correcao():
 async def debug(request: Request):
     body = await request.body()
     return {"body": body.decode()}
+@app.head("/")
+def root_head():
+    return {}

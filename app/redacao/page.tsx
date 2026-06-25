@@ -2,24 +2,26 @@
 
 import React, { useState } from "react";
 
-export default function redacaoPage() {
-const [redacao, setRedacao] = useState("");
- const [resultado, setResultado] = useState<any>(null);
+export default function RedacaoPage() {
+  const [redacao, setRedacao] = useState("");
+  const [resultado, setResultado] = useState<any>(null);
 
-    const corrigir = async () => {
-  const response = await fetch("https://brainy-assistant.onrender.com/corrigir", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      texto: redacao
-    }),
-  });
+  const corrigir = async () => {
+    const response = await fetch("https://brainy-assistant.onrender.com/corrigir", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        texto: redacao
+      }),
+    });
 
-  const dados = await response.json();
+    const dados = await response.json();
+    setResultado(dados);
+  };
 
- return (
+  return (
     <div>
       <textarea
         value={redacao}
@@ -42,6 +44,4 @@ const [redacao, setRedacao] = useState("");
       )}
     </div>
   );
-}
-
 }
