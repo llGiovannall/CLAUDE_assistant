@@ -33,7 +33,7 @@ export default function Home() {
 
        <div className="flex flex-col gap-4">
           <a className="flex h-12 items-center justify-center gap-2 rounded-full bg-foreground px-8 text-background hover:bg-[#383838] dark:hover:bg-[#ccc]"
-            href="/redacao" onClick={() => router.push("/page")}>
+            href="/redacao" onClick={() => router.push("/redacao")}>
             Redação
          
           </a>
