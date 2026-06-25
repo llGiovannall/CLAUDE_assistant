@@ -7,7 +7,7 @@ const [redacao, setRedacao] = useState("");
  const [resultado, setResultado] = useState<any>(null);
 
     const corrigir = async () => {
-  const response = await fetch("https://brainy-assistant.onrender.com", {
+  const response = await fetch("https://brainy-assistant.onrender.com/corrigir", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
